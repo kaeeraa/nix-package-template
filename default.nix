@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
     rev = "v${finalAttrs.version}";
 
     fetchSubmodules = true;
-    hash = "";
+    hash = "sha256-AHloDAuJxKdqK8fqDD9JN6VuSzEtNg9PjnPbRGWPZv0=";
   };
 
   cmakeFlags = [
