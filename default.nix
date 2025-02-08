@@ -9,7 +9,7 @@
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "packageName";
-  version = "1.0.0";
+  version = "1.0.1";
 
   src = fetchFromGitHub {
     owner = "kaeeraa";
@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
     rev = "v${finalAttrs.version}";
 
     fetchSubmodules = true;
-    hash = "sha256-7s+t8N+wrNqBLUBV+pd6ewxtMucsoIGabWfpqlRb2Zg=";
+    hash = "";
   };
 
   cmakeFlags = [
