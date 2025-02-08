@@ -20,7 +20,7 @@ stdenv.mkDerivation (finalAttrs: {
     rev = "v${finalAttrs.version}";
 
     fetchSubmodules = true;
-    hash = lib.fakeHash; # Fill with the real hash
+    hash = "sha256-7s+t8N+wrNqBLUBV+pd6ewxtMucsoIGabWfpqlRb2Zg=";
   };
 
   cmakeFlags = [
