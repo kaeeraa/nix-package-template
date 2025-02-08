@@ -22,7 +22,6 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeFlags = [
     "-GNinja"
-    "-DCMAKE_INSTALL_PREFIX=${placeholder "out"}"
   ];
 
   nativeBuildInputs = [
