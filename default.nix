@@ -17,7 +17,7 @@ stdenv.mkDerivation (finalAttrs: {
   src = fetchFromGitHub {
     owner = "kaeeraa";
     repo = "nix-package-template_cpp";
-    rev = "main"; # Can be a branch, tag, or commit
+    rev = "v${finalAttrs.version}";
 
     fetchSubmodules = true;
     hash = lib.fakeHash; # Fill with the real hash
