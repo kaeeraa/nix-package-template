@@ -5,7 +5,7 @@
   ninja,
   lib,
   clang,
-  gcc
+  gcc,
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "packageName";
@@ -22,6 +22,7 @@ stdenv.mkDerivation (finalAttrs: {
 
   cmakeFlags = [
     "-GNinja"
+    "-DCMAKE_INSTALL_PREFIX=${placeholder "out"}"
   ];
 
   nativeBuildInputs = [
