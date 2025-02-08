@@ -2,13 +2,10 @@
   stdenv,
   fetchFromGitHub,
   cmake,
-  python3,
   ninja,
   lib,
   clang,
-  glibc,
-  autoPatchelfHook,
-  zlib,
+  gcc
 }:
 stdenv.mkDerivation (finalAttrs: {
   pname = "packageName";
@@ -29,16 +26,8 @@ stdenv.mkDerivation (finalAttrs: {
 
   nativeBuildInputs = [
     cmake
-    python3
     ninja
-    clang
-    autoPatchelfHook
-  ];
-
-  buildInputs = [
-    glibc
-    zlib
-    stdenv.cc
+    gcc
   ];
 
   meta = with lib; {
